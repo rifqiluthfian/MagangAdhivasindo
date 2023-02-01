@@ -3,10 +3,12 @@
 * {
     margin: 0px;
 }
+
 body {
-    font-family: 'Noto Sans JP',sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     background-color: #F6F5F3;
 }
+
 .container {
     margin: 0px 10% 0 10%;
 }
@@ -19,7 +21,8 @@ body {
     left: 0;
     z-index: 999;
 }
-#header img{
+
+#header img {
     margin: 10px;
     width: 25%;
 }
@@ -27,11 +30,12 @@ body {
 /* Hero */
 
 #hero {
-position:relative;
-  width:100%;
-  height:100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
-#hero img{
+
+#hero img {
     position: relative;
     left: 0;
     top: 0;
@@ -44,39 +48,43 @@ position:relative;
 .gradient-overlay {
     position: relative;
 }
-    .gradient-overlay::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(to bottom, transparent, transparent, #1F74B4);
-      opacity: 0.9;
-      border-radius: 0px 0px 50px 50px;
-    }
+
+.gradient-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent, transparent, #1F74B4);
+    opacity: 0.9;
+    border-radius: 0px 0px 50px 50px;
+}
 
 
-#hero .isi{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  padding-top:42.5%;  
-  text-align:center;
-  font-size:3vw;
-  
+#hero .isi {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 42.5%;
+    text-align: center;
+    font-size: 3vw;
+
 }
-#hero .isi h1{
-    font-weight:bold;
-    color:white;
+
+#hero .isi h1 {
+    font-weight: bold;
+    color: white;
 }
-#hero .isi h2{
+
+#hero .isi h2 {
     font-size: 2.7vw;
     color: #eeeeee;
     letter-spacing: 2px;
 }
-#hero button{
+
+#hero button {
     cursor: pointer;
     width: 8vw;
     height: 8vw;
@@ -89,7 +97,8 @@ position:relative;
     color: #1F74B4;
     box-shadow: 0.1px 1px 1px grey;
 }
-#hero button:hover{
+
+#hero button:hover {
     background-color: #1F74B4;
     color: #fff;
 }
@@ -119,6 +128,7 @@ position:relative;
     height: auto;
     margin-right: 15px;
 }
+
 /* big previous & next buttons */
 #profil .flickity-prev-next-button {
     display: none;
@@ -138,10 +148,11 @@ position:relative;
     display: none;
 }
 
-.text{
+.text {
     padding: 10px 10% 10px 10%;
     background-color: #fff;
 }
+
 /* Kontak */
 
 #kontak {
@@ -151,7 +162,7 @@ position:relative;
     padding-bottom: 50px;
 }
 
-#kontak .container-sosmed{
+#kontak .container-sosmed {
     margin: 0px 15% 0px 15%;
     width: 70%;
     /* Center vertically and horizontally */
@@ -159,7 +170,8 @@ position:relative;
     justify-content: center;
     align-items: center;
 }
-#kontak .sosmed{
+
+#kontak .sosmed {
     margin-top: 15px;
     width: 100%;
     height: auto;
@@ -168,7 +180,8 @@ position:relative;
     background-color: white;
     box-shadow: 1px 1px 1px grey;
 }
-#kontak .sosmed button{
+
+#kontak .sosmed button {
     font-size: 3vw;
     margin-right: 1px;
     border-radius: 50%;
@@ -176,44 +189,41 @@ position:relative;
     border-style: none;
 
 }
+
 /* Footer */
 
 
-.footer{
+.footer {
     margin-top: 20px;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
     border-radius: 20px 20px 0px 0px;
     font-size: 8px;
     text-align: center;
     background-color: white;
-    display: flex;  
-    height: 60px;
+    display: flex;
+    height: 80px;
 }
-.footer div{
+
+.footer div {
     position: relative;
-     flex: 50%;
+    flex: 50%;
 }
-.footer .profil{
-    bottom: 20px;
-    left: 0px;
-    width: 50%;
-    position:absolute;
 
-
-}
-.footer .information{
-    bottom: 20px;
-    right: 0px;
-    width: 50%;
-    position:absolute;
-
-
-}
-.footer img{
+.footer img {
     width: 50px;
 }
-.footer .profil img,h1,.information img,h1{
-    cursor:pointer;
+
+.footer .profil img {
+    left: 40%;
+}
+
+.footer .profil img,
+h1,
+.information img,
+h1 {
+    cursor: pointer;
 }
 
 
@@ -221,17 +231,18 @@ position:relative;
 
 /* Hero */
 
-#heros{
+#heros {
     margin-top: 70px;
 }
+
 /* Carousel */
-#heros .main-carousel {
-    padding: 20px 20px 20px 20px;
+#heros .mains-carousel {
+    padding: 0px;
 }
 
-#heros .main-carousel img {
+#heros .mains-carousel img {
     width: 100%;
-    height: 100%;
+    height: auto;
     border-radius: 20px;
 }
 
@@ -247,7 +258,7 @@ position:relative;
     margin: 0 30% 0 30%;
 }
 
-#adhivasindo img{
+#adhivasindo img {
     margin-top: 30px;
     width: 100%;
 }
@@ -261,13 +272,15 @@ position:relative;
     max-height: 1200px;
     min-height: 150px;
 }
-#contact .sosmed{
+
+#contact .sosmed {
     margin-top: 15px;
     height: auto;
     padding: 5px;
     border-radius: 30px;
 }
-#contact .sosmed button{
+
+#contact .sosmed button {
     font-size: 5vw;
     margin-right: 10px;
     border-radius: 50%;
@@ -282,3 +295,9 @@ position:relative;
     display: block;
     margin-bottom: 50px;
 }
+
+
+.tabcontent {
+    display: none;
+  }
+
