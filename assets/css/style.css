@@ -114,7 +114,7 @@ body {
 
 /* Carousel */
 .main-carousel {
-    padding: 20px 0px 20px 0px;
+    padding: 20px 0px 20px 20px;
 }
 
 .main-carousel img {
@@ -124,7 +124,7 @@ body {
 }
 
 .cell {
-    width: 50%;
+    width: 60%;
     height: auto;
     margin-right: 15px;
 }
@@ -149,6 +149,7 @@ body {
 }
 
 .text {
+    font-size: 3.2vw;
     padding: 10px 10% 10px 10%;
     background-color: #fff;
 }
@@ -163,7 +164,7 @@ body {
 }
 
 #kontak .container-sosmed {
-    margin: 0px 15% 0px 15%;
+    margin: 0 auto;
     width: 70%;
     /* Center vertically and horizontally */
     display: flex;
@@ -176,54 +177,22 @@ body {
     width: 100%;
     height: auto;
     padding: 5px;
-    border-radius: 30px;
+    border-radius: 15px;
     background-color: white;
     box-shadow: 1px 1px 1px grey;
 }
 
 #kontak .sosmed button {
-    font-size: 3vw;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    width: 9vw;
+    height: 9vw;
+    font-size: 5vw;
     margin-right: 1px;
     border-radius: 50%;
-    padding: 10px;
     border-style: none;
 
-}
-
-/* Footer */
-
-
-.footer {
-    margin-top: 20px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    border-radius: 20px 20px 0px 0px;
-    font-size: 8px;
-    text-align: center;
-    background-color: white;
-    display: flex;
-    height: 80px;
-}
-
-.footer div {
-    position: relative;
-    flex: 50%;
-}
-
-.footer img {
-    width: 50px;
-}
-
-.footer .profil img {
-    left: 40%;
-}
-
-.footer .profil img,
-h1,
-.information img,
-h1 {
-    cursor: pointer;
 }
 
 
@@ -234,22 +203,11 @@ h1 {
 #heros {
     margin-top: 70px;
 }
-
-/* Carousel */
-#heros .mains-carousel {
-    padding: 0px;
-}
-
-#heros .mains-carousel img {
-    width: 100%;
-    height: auto;
+#heros img{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
     border-radius: 20px;
-}
-
-#heros .cell {
-    width: 100%;
-    height: auto;
-    margin-right: 0px;
 }
 
 /* Main */
@@ -281,7 +239,11 @@ h1 {
 }
 
 #contact .sosmed button {
-    font-size: 5vw;
+    cursor: pointer;
+    width: 10vw;
+    height: 10vw;
+    padding: 6px;
+    font-size: 4vw;
     margin-right: 10px;
     border-radius: 50%;
     padding: 10px;
@@ -296,8 +258,142 @@ h1 {
     margin-bottom: 50px;
 }
 
-
 .tabcontent {
     display: none;
-  }
+}
 
+/* ====================== TAB BAR ===================== */
+
+
+.tabbar {
+    position: fixed;
+    bottom: 0;
+    --icon-active: #275efe;
+    --icon-inactive: #6c7486;
+    --icon-hover: #99a3ba;
+    --text: #016BC1;
+    --shadow: rgba(18, 22, 33, 0.1);
+    --background : white;
+    border-radius: 0 0 12px 12px;
+    background: var(--background);
+    width: 100%;
+    height: 64px;
+    padding: 0 12px;
+    box-shadow: 0 8px 16px var(--shadow);
+  }
+  .tabbar > div {
+    display: flex;
+    height: 100%;
+    position: relative;
+  }
+  .tabbar > div label {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .tabbar > div label svg,
+  .tabbar > div label span, 
+  .tabbar > div label img {
+    display: block;
+    -webkit-backface-visibility: hidden;
+    transition: transform 0.4s cubic-bezier(0.2, 0.64, 0.48, 1.12), opacity 0.4s ease, color 0.4s ease;
+    transform: translateY(var(--y)) scale(var(--s));
+  }
+  .tabbar > div label svg,
+  .tabbar > div label img {
+    --y: 0;
+    --s: 0.84;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    transform-origin: 50% 50%;
+  }
+  .tabbar > div label span {
+    --y: -8px;
+    --s: 0.92;
+    font-size: 12px;
+    font-weight: 500;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 0;
+    opacity: 0;
+    color: var(--text);
+    transform-origin: 50% 0;
+  }
+  .tabbar > div label:hover svg,
+  .tabbar > div label:hover img{
+    color: var(--icon-hover);
+  }
+  .tabbar > div label:active svg,
+  .tabbar > div label:active img {
+    --s: 0.76;
+  }
+  .tabbar > div input {
+    display: none;
+  }
+  .tabbar > div input:nth-of-type(1):checked + label + input + label + input + label + span {
+    --x: 0%;
+  }
+  .tabbar > div input:nth-of-type(2):checked + label + input + label + span {
+    --x: 100%;
+  }
+  .tabbar > div input:nth-of-type(3):checked + label + span {
+    --x: 200%;
+  }
+  .tabbar > div input:checked + label svg,
+  .tabbar > div input:checked + label img {
+    --y: -24px;
+    --s: 1;
+    color: var(--icon-active);
+  }
+  .tabbar > div input:checked + label span {
+    --s: 1;
+    --y: -14px;
+    opacity: 1;
+  }
+  .tabbar > div > span {
+    --x: 0;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    transition: transform 0.4s cubic-bezier(0.2, 0.64, 0.48, 1.12);
+    transform: translateX(var(--x));
+    -webkit-backface-visibility: hidden;
+  }
+  
+  html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  * {
+    box-sizing: inherit;
+  }
+  *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body .dribbble {
+    position: fixed;
+    display: block;
+    right: 20px;
+    bottom: 20px;
+  }
+  body .dribbble img {
+    display: block;
+    height: 28px;
+  }
