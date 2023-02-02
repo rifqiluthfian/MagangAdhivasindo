@@ -203,12 +203,6 @@ body {
 #heros {
     margin-top: 70px;
 }
-#heros img{
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-    border-radius: 20px;
-}
 
 /* Main */
 
@@ -268,10 +262,12 @@ body {
 .tabbar {
     position: fixed;
     bottom: 0;
-    --icon-active: #275efe;
-    --icon-inactive: #6c7486;
+    --background-active: #0064B0 ;
+    --background-inactive: transparent ;
+    --icon-active: white;
+    --icon-inactive: #666666;
     --icon-hover: #99a3ba;
-    --text: #016BC1;
+    --text: #0064B0;
     --shadow: rgba(18, 22, 33, 0.1);
     --background : white;
     border-radius: 0 0 12px 12px;
@@ -297,21 +293,31 @@ body {
   }
   .tabbar > div label svg,
   .tabbar > div label span, 
-  .tabbar > div label img {
+  .tabbar > div label .rounded {
     display: block;
-    -webkit-backface-visibility: hidden;
+    --webkit-backface-visibility: hidden;
     transition: transform 0.4s cubic-bezier(0.2, 0.64, 0.48, 1.12), opacity 0.4s ease, color 0.4s ease;
     transform: translateY(var(--y)) scale(var(--s));
   }
-  .tabbar > div label svg,
-  .tabbar > div label img {
+  .tabbar > div label svg {
+    color: var(--icon-inactive);
     --y: 0;
     --s: 0.84;
-    width: 60px;
-    height: 60px;
-    margin: auto;
+    width: 50px;
+    height: 50px;
+    padding: 7px;
     transform-origin: 50% 50%;
+    margin: 0 auto;
   }
+  .tabbar .rounded {
+    width: 55px;
+    height: 55px;
+    background-color:var(--background-inactive);
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  
   .tabbar > div label span {
     --y: -8px;
     --s: 0.92;
@@ -326,12 +332,11 @@ body {
     color: var(--text);
     transform-origin: 50% 0;
   }
-  .tabbar > div label:hover svg,
-  .tabbar > div label:hover img{
+  .tabbar > div label:hover svg{
     color: var(--icon-hover);
   }
   .tabbar > div label:active svg,
-  .tabbar > div label:active img {
+  .tabbar > div label:active .rounded{
     --s: 0.76;
   }
   .tabbar > div input {
@@ -346,10 +351,14 @@ body {
   .tabbar > div input:nth-of-type(3):checked + label + span {
     --x: 200%;
   }
-  .tabbar > div input:checked + label svg,
-  .tabbar > div input:checked + label img {
+ 
+  .tabbar > div input:checked + label .rounded {
     --y: -24px;
     --s: 1;
+    color: var(--icon-active);
+    background-color: var(--background-active);
+  }
+  .tabbar > div input:checked + label svg{
     color: var(--icon-active);
   }
   .tabbar > div input:checked + label span {
@@ -367,7 +376,7 @@ body {
     width: 50%;
     transition: transform 0.4s cubic-bezier(0.2, 0.64, 0.48, 1.12);
     transform: translateX(var(--x));
-    -webkit-backface-visibility: hidden;
+    --webkit-backface-visibility: hidden;
   }
   
   html {

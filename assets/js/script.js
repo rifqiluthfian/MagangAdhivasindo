@@ -1,13 +1,35 @@
-$('.main-carousel').flickity({
-  cellAlign: 'left',
-  wrapAround: true,
-  freeScroll: true
+$(document).ready(function () {
+  $('.main-carousel').flickity({
+    cellAlign: 'left',
+    wrapAround: true,
+    freeScroll: true
+  });
+
+  
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: true
+      },
+      600: {
+        items: 3,
+        nav: false
+      },
+      1000: {
+        items: 5,
+        nav: true,
+        loop: false
+      }
+    }
+  });
+
+
 });
-$('.mains-carousel').flickity({
-  cellAlign: 'left',
-  wrapAround: true,
-  freeScroll: true
-});
+
 
 function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
@@ -21,6 +43,9 @@ function openTab(evt, tabName) {
   }
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
+
 }
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+
