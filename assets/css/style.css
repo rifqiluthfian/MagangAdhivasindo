@@ -200,8 +200,61 @@ body {
 
 /* Hero */
 
-#heros {
-    margin-top: 70px;
+/* Carousel Page 2 */
+
+
+#heroes,
+#heroes .wrapper,
+#heroes div{
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+#heroes{
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+#heroes img{
+  width: 100%;
+  border-radius: 20px;
+}
+.wrapper{
+  width: 100%;
+}
+.carousel{
+  max-width: 300px;
+  margin: 0 auto;
+}
+.carousel .card{
+  color: #fff;
+  text-align: center;
+  line-height: 250px;
+  font-size: 90px;
+  font-weight: 600;
+
+}
+.owl-dots{
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-dot{
+
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  outline: none;
+  border-radius: 14px;
+  border: 2px solid #0072bc!important;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: #0072bc!important;
 }
 
 /* Main */
@@ -395,14 +448,4 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  body .dribbble {
-    position: fixed;
-    display: block;
-    right: 20px;
-    bottom: 20px;
-  }
-  body .dribbble img {
-    display: block;
-    height: 28px;
   }

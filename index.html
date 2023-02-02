@@ -10,6 +10,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
 
     <!-- CSS External -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -25,6 +26,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
+
 </head>
 <!-- TAB BAR -->
 
@@ -32,7 +34,7 @@
     <nav class="tabbar">
         <div>
             <input id="menu-1" type="radio" name="menu" checked>
-            <label onclick="openTab(event,'tab-profile')" id="defaultOpen" for="menu-1">
+            <label onclick="openTab(event,'tab-profile')" for="menu-1">
                 <div class="rounded">
                     <svg>
                         <use xlink:href="#profileIcon">
@@ -57,7 +59,7 @@
     <!-- END TAB BAR -->
 
     <!-- TAB PROFIL -->
-    <div id="tab-profile" class="tabcontent">
+    <div id="tab-profile" class="tabcontent" style="display: block;">
 
         <!-- Header -->
         <header id="header">
@@ -132,19 +134,21 @@
     <div id="tab-information" class="tabcontent">
 
         <!-- HERO -->
-        <section id="heros">
-            <div class="container">
-                <h1>Ini Carousel</h1>
-                <div class="owl-carousel">
-                    <div> Your Content </div>
-                    <div> Your Content </div>
-                    <div> Your Content </div>
-                    <div> Your Content </div>
-                    <div> Your Content </div>
-                    <div> Your Content </div>
-                    <div> Your Content </div>
-                </div>
+
+        <section id="heroes">
+        <div class="wrapper">
+            <div class="carousel owl-carousel">
+               <div class="card card-1">
+                 <img src="assets/images/cetak1.jpg" alt="">
+               </div>
+               <div class="card card-2">
+                  <img src="assets/images/cetak2.jpeg" alt="">
+               </div>
+               <div class="card card-3">
+                <img src="assets/images/cetak3.jpeg" alt="">
+               </div>
             </div>
+         </div>
         </section>
 
         <!-- END HERO -->
@@ -199,10 +203,13 @@
 
 
     <!-- Script-->
-
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
+    <!-- Carousel Owl -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Carousel Flickity -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
