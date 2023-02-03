@@ -109,3 +109,69 @@ body {
     border-style: none;
 
 }
+
+/* PAGE 2 */
+
+.undangan{
+    width: 90%;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+ }
+ .undangan img{
+    border-radius: 20px;
+    box-shadow: 1px 2px 3px grey;
+ }
+ #profilePageDua {
+    color: #334C8C;
+ }
+ #profilePageDua .logoAdhivasi{
+    width: 50%;
+ }
+ #profilePageDua .moto {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 6vw;
+    letter-spacing: 0.5px;
+}
+#profilePageDua .sub {
+    margin-top: 100px;
+    width: max-content;
+}
+
+#profilePageDua .sub h2 {
+    opacity: 1;
+    font-weight: 600;
+    font-size: 4.5vw;
+}
+
+#profilePageDua p {
+    font-size: 3.5vw;
+    color:#0863A9;
+}
+#profilePageDua .sosmed {
+    width: max-content;
+    height: auto;
+    padding: 5px;
+}
+
+#profilePageDua .sosmed button {
+    cursor: pointer;
+    width: 10vw;
+    height: 10vw;
+    font-size: 5.5vw;
+    margin-right: 5px;
+    border-radius: 50%;
+    border-style: none;
+}
+#profilePageDua .container-sosmed {
+    width: 70%;
+    display: flex;
+    margin:0px 0px 0px 0px;
+}
+#profilePageDua p {
+    margin: 30px 0px 20px 0px;
+    font-weight: 600;
+
+}
